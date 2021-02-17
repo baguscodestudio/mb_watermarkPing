@@ -1,0 +1,5 @@
+RegisterNetEvent('PingUpdate')
+AddEventHandler('PingUpdate', function()
+    local ping = GetPlayerPing(source)
+    TriggerClientEvent('updatePing', source, ping)
+end)
